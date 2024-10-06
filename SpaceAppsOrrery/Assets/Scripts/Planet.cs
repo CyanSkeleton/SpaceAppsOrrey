@@ -18,7 +18,7 @@ public class Planet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        tr = GetComponent<TrailRenderer>();
+        tr = transform.GetChild(0).GetComponent<TrailRenderer>();
     }
 
     void SwapToTrueMass()

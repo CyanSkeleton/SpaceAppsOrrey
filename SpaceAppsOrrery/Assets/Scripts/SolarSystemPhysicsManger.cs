@@ -74,7 +74,7 @@ public class SolarSystemPhysicsManger : MonoBehaviour
                 }
                 if(gravity == 0)
                 {
-                    a.GetComponent<TrailRenderer>().Clear();
+                    a.transform.GetChild(0).GetComponent<TrailRenderer>().Clear();
                 }
             }
         }
