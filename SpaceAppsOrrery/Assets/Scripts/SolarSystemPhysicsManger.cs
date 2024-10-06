@@ -41,7 +41,7 @@ public class SolarSystemPhysicsManger : MonoBehaviour
             a.transform.LookAt(sun.transform);
             foreach (GameObject b in celestialBodies)
             {
-                if(!a.Equals(b))
+                if(!a.Equals(b) && gravity != 0)
                 {
                     float massA = a.GetComponent<Rigidbody>().mass;
                     float massB = b.GetComponent<Rigidbody>().mass;
@@ -69,7 +69,6 @@ public class SolarSystemPhysicsManger : MonoBehaviour
                     float massB = b.GetComponent<Rigidbody>().mass;
                     float distance = Vector3.Distance(a.transform.position, b.transform.position);
                     a.transform.LookAt(b.transform);
-
                     a.GetComponent<Rigidbody>().velocity += a.transform.right * Mathf.Sqrt((gravity * massB) / distance);
                 }
                 if(gravity == 0)
@@ -77,7 +76,21 @@ public class SolarSystemPhysicsManger : MonoBehaviour
                     a.GetComponent<Planet>().tr.Clear();
                 }
             }
+            if (gravity == 0)
+            {
+                a.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            }
         }
+    }
+
+    public void increaseSpeed()
+    {
+        targetGravity += (float)0.05;
+    }
+
+    public void decreaseSpeed()
+    {
+        targetGravity -= (float)0.05;
     }
 
     void GravityChange()
