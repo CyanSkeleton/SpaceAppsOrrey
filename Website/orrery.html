@@ -1,0 +1,137 @@
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background-image: url(https://images.unsplash.com/photo-1456154875099-97a3a56074d3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fDE2ayUyMHNreSUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-image: url(https://res.cloudinary.com/gimmersta-wallpaper/image/upload/c_fill,f_auto,fl_progressive,q_auto,h_1200/v1716294830/articles/SG0068PI06W_product.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-image: url(https://cdn4.volusion.store/eakqp-vgyrk/v/vspfiles/photos/LightBlueStars-2.jpg?v-cache=1721844561);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px 0px 20px 20px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: center;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px 10px 30px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-image: url(https://t4.ftcdn.net/jpg/02/43/75/73/360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-decoration: underline overline white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+
+/* Add a card effect for articles */
+.card.pink {
+  background-color: white;
+  padding: 20px 20px 25px 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  border-width: 5px;
+  background-color: #ffeeec;
+  
+}
+.card.blue {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  border-width: 5px;
+  background-color: #E4F6F8;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://static1.squarespace.com/static/56beda9601dbaed289db4f1d/t/58ccfff7725e25717a2d6b39/1489829885895/new-SpaceApps_logo.png?format=1500w" alt="The NASA Space Apps Challenge Logo" style="width:150px; height:150px;">
+  <h3>The Mashed Potatoes'</h3>
+  <h1>Orrery Web App</h1>
+</div>
+
+<div class="topnav">
+  <a href="Main.html">Home</a>
+  <a href="orrery.html">The Virtual Orrery</a>
+</div>
+</body>
+</html>
