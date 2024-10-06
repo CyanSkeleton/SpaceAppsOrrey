@@ -18,7 +18,7 @@ public class Planet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        tr = transform.GetChild(0).GetComponent<TrailRenderer>();
+        tr = GetComponentInChildren<TrailRenderer>();
     }
 
     void SwapToTrueMass()
@@ -30,6 +30,11 @@ public class Planet : MonoBehaviour
     }
     public void ScaleTrailRendererTime(float gravity)
     {
+        if(tr == null)
+        {
+            tr = GetComponentInChildren<TrailRenderer>();
+        }
+
         tr.time = (float)(((0.1 / gravity) * 1.5f) * baseTrailRendererModifiedTime);
     }
 }
