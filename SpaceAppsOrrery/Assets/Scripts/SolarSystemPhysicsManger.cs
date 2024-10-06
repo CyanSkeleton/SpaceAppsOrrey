@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class SolarSystemPhysicsManger : MonoBehaviour
 {
-    float gravity = 100f;
+    public float targetGravity = 100f;
+    public float gravity = 100f;
     GameObject[] celestialBodies;
+    GameObject sun;
 
     // Start is called before the first frame update
     void Start()
     {
+        gravity = targetGravity;
         celestialBodies = GameObject.FindGameObjectsWithTag("Celestial Body");
+        sun = this.gameObject;
 
         InitialVelocity();
     }
@@ -23,13 +27,18 @@ public class SolarSystemPhysicsManger : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        GravityPhysics();
+        if(targetGravity != gravity)
+        {
+            GravityChange();
+        }
+            GravityPhysics();
     }
 
     void GravityPhysics() 
     {
         foreach (GameObject a in celestialBodies)
         {
+            a.transform.LookAt(sun.transform);
             foreach (GameObject b in celestialBodies)
             {
                 if(!a.Equals(b))
@@ -48,6 +57,7 @@ public class SolarSystemPhysicsManger : MonoBehaviour
     {
         foreach (GameObject a in celestialBodies)
         {
+            a.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             foreach (GameObject b in celestialBodies) 
             {
                 if(!a.Equals(b))
@@ -59,6 +69,15 @@ public class SolarSystemPhysicsManger : MonoBehaviour
                     a.GetComponent<Rigidbody>().velocity += a.transform.right * Mathf.Sqrt((gravity * massB) / distance);
                 }
             }
+        }
+    }
+
+    void GravityChange()
+    {
+        gravity = targetGravity;
+        foreach (GameObject a in celestialBodies)
+        {
+            InitialVelocity();
         }
     }
 }

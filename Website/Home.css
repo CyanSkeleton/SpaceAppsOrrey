@@ -1,3 +1,48 @@
+:root {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececed;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+}
+
 body {
-  background-color: lightblue; /* Just to test if the CSS and HTML files are linked */
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: lightblue;
+}
+
+.fira-code-regular {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
 }
