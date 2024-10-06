@@ -11,10 +11,9 @@ public class Planet : MonoBehaviour
     public float modifiedMass;
     public float modifiedRadius;
     public float modifiedDistance;
-    public float baseTrailRendererTime;
+    public float baseTrailRendererModifiedTime;
     public Rigidbody rb;
     public TrailRenderer tr;
-    public Color trailColor;
 
     private void Start()
     {
@@ -28,5 +27,9 @@ public class Planet : MonoBehaviour
         rb.mass = trueMass;
         this.gameObject.transform.localScale = new Vector3(trueRadius, trueRadius, trueRadius);
         this.gameObject.transform.position = new Vector3(trueDistance, 0, 0);
+    }
+    public void ScaleTrailRendererTime(float gravity)
+    {
+        tr.time = (float)(((0.1 / gravity) * 1.5f) * baseTrailRendererModifiedTime);
     }
 }

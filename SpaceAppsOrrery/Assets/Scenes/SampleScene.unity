@@ -530,8 +530,10 @@ MonoBehaviour:
   modifiedMass: 17
   modifiedRadius: 6
   modifiedDistance: 240
+  baseTrailRendererTime: 320
   rb: {fileID: 0}
   tr: {fileID: 0}
+  trailColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!96 &428454831
 TrailRenderer:
   serializedVersion: 3
@@ -553,7 +555,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 83b392128bbb6904cb2c4a0b1e7018d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -789,8 +791,10 @@ MonoBehaviour:
   modifiedMass: 0.107
   modifiedRadius: 1.25
   modifiedDistance: 50
+  baseTrailRendererTime: 14
   rb: {fileID: 0}
   tr: {fileID: 0}
+  trailColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!96 &498904397
 TrailRenderer:
   serializedVersion: 3
@@ -812,7 +816,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 127f3fd38f93efa4ea9e0c4bc6df3089, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1114,7 +1118,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 24166c8d2abffb349a5c1732d02da03b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1135,7 +1139,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 500
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1182,7 +1186,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -1210,8 +1214,8 @@ GameObject:
   - component: {fileID: 1294025494}
   - component: {fileID: 1294025493}
   - component: {fileID: 1294025492}
-  - component: {fileID: 1294025497}
   - component: {fileID: 1294025498}
+  - component: {fileID: 1294025497}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Celestial Body
@@ -1353,7 +1357,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f187dfd6a3ad0044ca5d432d6b12ea48, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1454,8 +1458,10 @@ MonoBehaviour:
   modifiedMass: 0.055
   modifiedRadius: 0.75
   modifiedDistance: 20
+  baseTrailRendererTime: 3.2
   rb: {fileID: 0}
   tr: {fileID: 0}
+  trailColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1365549959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,8 +1615,10 @@ MonoBehaviour:
   modifiedMass: 317
   modifiedRadius: 10
   modifiedDistance: 90
+  baseTrailRendererTime: 36
   rb: {fileID: 0}
   tr: {fileID: 0}
+  trailColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!96 &1365549966
 TrailRenderer:
   serializedVersion: 3
@@ -1632,7 +1640,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f88ff96e763a0074b9aa0d1c16c52b78, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1868,8 +1876,10 @@ MonoBehaviour:
   modifiedMass: 14
   modifiedRadius: 7
   modifiedDistance: 190
+  baseTrailRendererTime: 170
   rb: {fileID: 0}
   tr: {fileID: 0}
+  trailColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!96 &1661925046
 TrailRenderer:
   serializedVersion: 3
@@ -1891,7 +1901,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e53b82b23b56998468acd7e69d217514, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2127,8 +2137,10 @@ MonoBehaviour:
   modifiedMass: 95
   modifiedRadius: 8
   modifiedDistance: 140
+  baseTrailRendererTime: 95
   rb: {fileID: 0}
   tr: {fileID: 0}
+  trailColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!96 &1704266017
 TrailRenderer:
   serializedVersion: 3
@@ -2150,7 +2162,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: d3d03eeed7341904db16628d165bbcac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2386,8 +2398,10 @@ MonoBehaviour:
   modifiedMass: 1
   modifiedRadius: 2
   modifiedDistance: 40
+  baseTrailRendererTime: 9.2
   rb: {fileID: 0}
   tr: {fileID: 0}
+  trailColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!96 &1794025892
 TrailRenderer:
   serializedVersion: 3
@@ -2409,7 +2423,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: b48293babba4e0d458c151622142d8e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2645,8 +2659,10 @@ MonoBehaviour:
   modifiedMass: 0.815
   modifiedRadius: 1.63
   modifiedDistance: 30
+  baseTrailRendererTime: 5.9
   rb: {fileID: 0}
   tr: {fileID: 0}
+  trailColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!96 &1857699060
 TrailRenderer:
   serializedVersion: 3
@@ -2668,7 +2684,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 01eb43f14470b3149a37dc97ab6470f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
