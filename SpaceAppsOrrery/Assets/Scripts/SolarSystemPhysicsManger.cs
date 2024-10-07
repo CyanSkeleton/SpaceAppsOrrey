@@ -73,7 +73,7 @@ public class SolarSystemPhysicsManger : MonoBehaviour
                 }
                 if(gravity == 0)
                 {
-                    a.GetComponent<Planet>().tr.Clear();
+                    a.GetComponentInChildren<Planet>().tr.Clear();
                 }
             }
             if (gravity == 0)
