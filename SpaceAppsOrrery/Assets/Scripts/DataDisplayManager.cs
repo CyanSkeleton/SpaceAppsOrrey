@@ -22,12 +22,4 @@ public class DataDisplayManager : MonoBehaviour
     {
         
     }
-    
-    public void OnPlanetChange(GameObject planet)
-    {
-        nameLine.GetComponent<TextMeshPro>().text = planet.name;
-        massLine.GetComponent<TextMeshPro>().text = "Mass: " + planet.GetComponent<Planet>().trueMass;
-        radiusLine.GetComponent<TextMeshPro>().text = "Radius: " + planet.gameObject.GetComponent<Planet>().trueRadius;
-        distanceLine.GetComponent<TextMeshPro>().text = "Distance: " + planet.GetComponent<Planet>().trueDistance;
-    }
 }

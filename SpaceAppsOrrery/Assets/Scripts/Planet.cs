@@ -1,6 +1,8 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 public class Planet : MonoBehaviour
@@ -13,9 +15,15 @@ public class Planet : MonoBehaviour
     public float modifiedRadius;
     public float modifiedDistance;
     public float baseTrailRendererModifiedTime;
+    public float fov;
     public Rigidbody rb;
     public TrailRenderer tr;
-
+    public TMP_Text nameLine;
+    public TMP_Text massLine;
+    public TMP_Text radiusLine;
+    public TMP_Text distanceLine;
+    public CinemachineFreeLook cam;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -37,5 +45,16 @@ public class Planet : MonoBehaviour
         }
 
         tr.time = (float)(((0.1 / gravity) * 1.5f) * baseTrailRendererModifiedTime);
+    }
+
+    public void OnPlanetChange()
+    {
+        nameLine.text = "Name: " + name;
+        print(name);
+        massLine.text = "Mass: " + trueMass + " X 10^" + trueMassExponent + " kg";
+        print(trueMassExponent);
+        radiusLine.text = "Radius: " + trueRadius + " miles";
+        distanceLine.text = "Distance: " + trueDistance + " million miles";
+        cam.m_Lens.FieldOfView = fov;
     }
 }
