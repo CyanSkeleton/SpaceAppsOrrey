@@ -6,7 +6,6 @@ using TMPro;
 
 public class DataDisplayManager : MonoBehaviour
 {
-    [SerializeField] CinemachineFreeLook cam;
     public GameObject nameLine;
     public GameObject massLine;
     public GameObject radiusLine;
@@ -24,11 +23,11 @@ public class DataDisplayManager : MonoBehaviour
         
     }
     
-    void OnPlanetChange()
+    public void OnPlanetChange(GameObject planet)
     {
-        nameLine.GetComponent<TextMeshPro>().text = cam.LookAt.name;
-        massLine.GetComponent<TextMeshPro>().text = "Mass: " + cam.LookAt.gameObject.GetComponent<Planet>().trueMass;
-        radiusLine.GetComponent<TextMeshPro>().text = "Radius: " + cam.LookAt.gameObject.GetComponent<Planet>().trueRadius;
-        distanceLine.GetComponent<TextMeshPro>().text = "Distance: " + cam.LookAt.gameObject.GetComponent<Planet>().trueDistance;
+        nameLine.GetComponent<TextMeshPro>().text = planet.name;
+        massLine.GetComponent<TextMeshPro>().text = "Mass: " + planet.GetComponent<Planet>().trueMass;
+        radiusLine.GetComponent<TextMeshPro>().text = "Radius: " + planet.gameObject.GetComponent<Planet>().trueRadius;
+        distanceLine.GetComponent<TextMeshPro>().text = "Distance: " + planet.GetComponent<Planet>().trueDistance;
     }
 }

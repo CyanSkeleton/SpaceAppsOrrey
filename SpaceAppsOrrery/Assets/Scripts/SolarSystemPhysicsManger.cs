@@ -96,7 +96,7 @@ public class SolarSystemPhysicsManger : MonoBehaviour
     void GravityChange()
     {
         gravity = targetGravity;
-        sun.GetComponent<TrailRenderer>().Clear();
+        sun.GetComponentInChildren<TrailRenderer>().Clear();
         foreach (GameObject a in celestialBodies)
         {
             InitialVelocity();
