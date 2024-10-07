@@ -8,6 +8,7 @@ public class SolarSystemPhysicsManger : MonoBehaviour
     public float gravity = 100f;
     GameObject[] celestialBodies;
     GameObject sun;
+    bool frozen;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,9 @@ public class SolarSystemPhysicsManger : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        if(targetGravity != gravity)
+        targetGravity = Mathf.Clamp(targetGravity, 0, 0.75f);
+        gravity = Mathf.Clamp(gravity, 0, 0.75f);
+        if (targetGravity != gravity)
         {
             GravityChange();
         }
@@ -36,6 +39,9 @@ public class SolarSystemPhysicsManger : MonoBehaviour
 
     void GravityPhysics() 
     {
+        Mathf.Clamp(targetGravity, 0, 1);
+        Mathf.Clamp(gravity, 0, 1);
+
         foreach (GameObject a in celestialBodies)
         {
             a.transform.LookAt(sun.transform);
@@ -55,6 +61,9 @@ public class SolarSystemPhysicsManger : MonoBehaviour
 
     void InitialVelocity() 
     {
+        Mathf.Clamp(targetGravity, 0, 1);
+        Mathf.Clamp(gravity, 0, 1);
+
         foreach (GameObject a in celestialBodies)
         {
             a.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
@@ -71,14 +80,21 @@ public class SolarSystemPhysicsManger : MonoBehaviour
                     a.transform.LookAt(b.transform);
                     a.GetComponent<Rigidbody>().velocity += a.transform.right * Mathf.Sqrt((gravity * massB) / distance);
                 }
-                if(gravity == 0)
+                if(gravity == 0 && a.GetComponent<Planet>() != null)
                 {
                     a.GetComponentInChildren<Planet>().tr.Clear();
                 }
             }
-            if (gravity == 0)
+            if (gravity == 0 && !frozen)
             {
                 a.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                a.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                frozen = true;
+            }
+            else if (gravity != 0 && frozen)
+            {
+                a.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                frozen = false;
             }
         }
     }
