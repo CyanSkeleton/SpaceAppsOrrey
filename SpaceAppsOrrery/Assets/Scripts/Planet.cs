@@ -6,6 +6,7 @@ using UnityEngine;
 public class Planet : MonoBehaviour
 {
     public float trueMass;
+    public float trueMassExponent;
     public float trueRadius;
     public float trueDistance;
     public float modifiedMass;
